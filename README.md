@@ -3,7 +3,13 @@
 Relatório técnico da análise experimental de transmissão em camada física e de enlace
 
 ## PARTE 1: Rede com HUB e análise de propagação do sinal
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Ethernet_Hub.jpg" alt="Exemplo de Hub de rede" width="400">
+
+Visualização do envio do ping:
+<img src="src/ping-hub.gif" alt="Envio de PDU no hub" width="500">
+
+Visualização do envio do pdu:
+<img src="src/pdu-hub.gif" alt="Envio de PDU no hub" width="500">
+
 
 **a) Por que todos os nós recebem o quadro inicialmente dentro de um hub?**
 
@@ -20,7 +26,11 @@ Se mais de um dispositivo emitir sinais ao mesmo tempo, ocorrerá interferência
 Isso diminui a eficiência, pois há tempos ociosos durante os backoffs, que se tornam ainda maiores conforme aumenta o número de dispositivos, já que a probabilidade de colisão cresce.
 
 ## PARTE 2: Rede com SWITCH e comparação física
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Network_switch.jpg" alt="Exemplo de Switch de rede" width="400">
+Visualização do envio do ping:
+<img src="src/ping-switch.gif" alt="Exemplo de Switch de rede" width="500">
+
+Visualização do envio do pdu:
+<img src="src/pdu-switch.gif" alt="Exemplo de Switch de rede" width="500">
 
 **a) Compare o fluxo do sinal elétrico no switch versus hub.**
 
@@ -42,4 +52,4 @@ Para visualizar de forma simples, é como se o cabo deixasse de ser uma rua estr
 
 Como o transmissor de uma ponta está conectado diretamente ao receptor da outra por meio dos circuitos internos do switch, os sinais nunca tentam ocupar o mesmo caminho físico ao mesmo tempo. Isso elimina completamente as colisões físicas e, por consequência, descarta a necessidade de os dispositivos compartilharem ou disputarem o acesso ao meio, permitindo que cada nó utilize a capacidade total da banda de forma isolada.
 
-<img src="https://www.totalphase.com/wp-content/uploads/2022/10/half-vs-full-duplex.png" alt="Diferença entre Half-Duplex e Full-Duplex" width="500">
+<img src="src/half-vs-full-duplex.png" alt="Diferença entre Half-Duplex e Full-Duplex" width="500">
