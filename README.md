@@ -2,13 +2,25 @@
 
 Relatório técnico da análise experimental de transmissão em camada física e de enlace
 
+[link para o arquivo pkt](camada-fisica.pkt)
+
+[link para a explicacao](explicacao.mp4)
+
+[link para o video no drive](https://drive.google.com/file/d/1naPw9qUuOXZapsW8X6pOE90DOf238hG6/view?usp=sharing)
+
 ## PARTE 1: Rede com HUB e análise de propagação do sinal
 
 Visualização do envio do ping:
-<img src="src/ping-hub.gif" alt="Envio de PDU no hub" width="500">
+
+<img src="src/ping-hub.gif" alt="Envio de PDU no hub" width="1000">
+
+[video mp4](src/ping-hub.mp4)
 
 Visualização do envio do pdu:
-<img src="src/pdu-hub.gif" alt="Envio de PDU no hub" width="500">
+
+<img src="src/pdu-hub.gif" alt="Envio de PDU no hub" width="1000">
+
+[video mp4](src/pdu-hub.mp4)
 
 
 **a) Por que todos os nós recebem o quadro inicialmente dentro de um hub?**
@@ -27,10 +39,16 @@ Isso diminui a eficiência, pois há tempos ociosos durante os backoffs, que se 
 
 ## PARTE 2: Rede com SWITCH e comparação física
 Visualização do envio do ping:
-<img src="src/ping-switch.gif" alt="Exemplo de Switch de rede" width="500">
+
+<img src="src/ping-switch.gif" alt="Exemplo de envio de ping no Switch" width="1000">
+
+[video mp4](src/ping-switch.mp4)
 
 Visualização do envio do pdu:
-<img src="src/pdu-switch.gif" alt="Exemplo de Switch de rede" width="500">
+
+<img src="src/pdu-switch.gif" alt="Exemplo de envio de pdu no Switch" width="1000">
+
+[video mp4](src/pdu-switch.mp4)
 
 **a) Compare o fluxo do sinal elétrico no switch versus hub.**
 
@@ -42,8 +60,8 @@ Visualização do envio do pdu:
 
 Porque o switch atua na Camada de Enlace, sendo capaz de reconhecer os endereços MAC e filtrar o tráfego para entregar apenas ao destino correto, evitando desperdício de banda nas outras portas.
 
-**c) O switch elimina o meio físico compartilhado? Justifique tecnicamente.
-**
+**c) O switch elimina o meio físico compartilhado? Justifique tecnicamente.**
+
 Sim. Nas redes modernas, o switch substitui a antiga topologia de barramento (meio compartilhado) por links ponto a ponto individuais para cada dispositivo conectado.
 
 Tecnicamente, isso ocorre porque o switch permite a operação em full-duplex, modo de transmissão em que os dados trafegam simultaneamente em ambas as direções.
@@ -52,4 +70,4 @@ Para visualizar de forma simples, é como se o cabo deixasse de ser uma rua estr
 
 Como o transmissor de uma ponta está conectado diretamente ao receptor da outra por meio dos circuitos internos do switch, os sinais nunca tentam ocupar o mesmo caminho físico ao mesmo tempo. Isso elimina completamente as colisões físicas e, por consequência, descarta a necessidade de os dispositivos compartilharem ou disputarem o acesso ao meio, permitindo que cada nó utilize a capacidade total da banda de forma isolada.
 
-<img src="src/half-vs-full-duplex.png" alt="Diferença entre Half-Duplex e Full-Duplex" width="500">
+<img src="src/half-vs-full-duplex.png" alt="Diferença entre Half-Duplex e Full-Duplex" width="1000">
